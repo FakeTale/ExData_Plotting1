@@ -1,6 +1,8 @@
 plot3 <- function(df) {
+  #Use function to read and subset the file
   source('getData.R')
   df <- getData()
+  #Make the plot
   png('plot3.png', width = 480, height = 480)
   plot(df$datetime, df$Sub_metering_1, type = "l", ylab='Energy sub metening', xlab='')
   lines(df$datetime, df$Sub_metering_2, col='red')
