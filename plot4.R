@@ -1,6 +1,8 @@
 plot4 <- function() {
+  #Use function to read and subset the data
   source('getData.R')
   df <- getData()
+  #Make the plot
   png('plot4.png', width = 480, height = 480)
   par(mfrow=c(2,2))
   with(df, {plot(datetime, Global_active_power, ylab = 'Global active Power (kilowatts)', xlab = '', type='l')
